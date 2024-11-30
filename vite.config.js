@@ -14,6 +14,7 @@ export default defineConfig({
     },
     build: {
         manifest: true, // Генерация манифеста для Laravel
+        outDir: 'public/build',
         rollupOptions: {
             output: {
                 entryFileNames: 'assets/[name]-[hash].js',
