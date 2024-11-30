@@ -3,7 +3,7 @@ LABEL authors="Samuraj198"
 
 ENTRYPOINT ["top", "-b"]
 
-FROM richarvey/nginx-php-fpm:1.7.2
+FROM richarvey/nginx-php-fpm:latest
 
 COPY . .
 
