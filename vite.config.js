@@ -10,7 +10,7 @@ export default defineConfig({
     ],
     build: {
         manifest: true, // Генерация манифеста для Laravel
-        outDir: 'public/build/.vite', // Путь до директории вывода
+        outDir: 'public/build', // Путь до директории вывода
     },
     server: {
         https: true,
