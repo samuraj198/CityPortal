@@ -1,5 +1,5 @@
 <div id="createCategory" class="createCategory hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-start z-50">
-    <form method="POST" class="block relative p-10 bg-white rounded-lg mt-20 flex flex-col gap-5 items-center" action="{{ route('createCategory') }}">
+    <form method="POST" class="block relative p-10 bg-white rounded-lg mt-20 flex flex-col gap-5 items-center" action="{{ url('createCategory') }}">
         @csrf
         <a onclick="closeCreateCategoryModal()" class="absolute right-2 top-0 text-4xl cursor-pointer">&times;</a>
         <h2 class="text-2xl font-bold">Напишите название новой категории</h2>
