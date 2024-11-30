@@ -1,5 +1,5 @@
 <div id="changeStatus" class="changeStatus hidden w-full h-full bg-black/80 z-50 flex items-start justify-center fixed left-0 top-0">
-    <form enctype="multipart/form-data" method="POST" class="relative bg-white p-10 mt-20 rounded-lg w-[40%] flex flex-col gap-5 items-center justify-center" action="{{ url('changeStatus') }}">
+    <form enctype="multipart/form-data" method="POST" class="relative bg-white p-10 mt-20 rounded-lg w-[40%] flex flex-col gap-5 items-center justify-center" action="{{ route('changeStatus') }}">
         @csrf
         <a onclick="closeChangeStatusModal()" class="absolute right-5 top-3 text-4xl cursor-pointer">&times;</a>
         <h2 class="text-2xl font-bold">Изменение статуса</h2>
