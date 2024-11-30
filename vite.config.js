@@ -21,10 +21,13 @@ export default defineConfig({
     },
     server: {
         https: true,
-        proxy: {
-            '/build': 'https://cityportal.onrender.com/build', // Убедитесь, что прокси настроено на https
-        }
+        host: '0.0.0.0',
     },
-    base: 'https://cityportal.onrender.com/build/'
+    resolve: {
+        alias: {
+            // Убедитесь, что все ссылки генерируются с https
+            'https://cityportal.onrender.com': 'https://cityportal.onrender.com'
+        }
+    }
 });
 
