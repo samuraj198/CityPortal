@@ -33,7 +33,7 @@ ENV LOG_CHANNEL=stderr
 ENV WEBROOT=/var/www/html/public
 
 # Настроим файлы для Nginx и PHP
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY .conf/nginx/nginx-site.conf /etc/nginx/conf.d/default.conf
 
 # Запуск Nginx и PHP-FPM
 CMD ["/start.sh"]
