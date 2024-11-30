@@ -8,6 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        manifest: true, // Генерация манифеста для Laravel
+        outDir: 'public/build/.vite', // Путь до директории вывода
+    },
     server: {
         https: true,
     }
