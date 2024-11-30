@@ -8,19 +8,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    server: {
-        https: true, // Включаем HTTPS для локальной разработки
-        host: '0.0.0.0', // Убедитесь, что Vite доступен через хост
-    },
-    build: {
-        manifest: true, // Генерация манифеста для Laravel
-        outDir: 'public/build',
-        rollupOptions: {
-            output: {
-                entryFileNames: 'assets/[name]-[hash].js',
-                chunkFileNames: 'assets/[name]-[hash].js',
-                assetFileNames: 'assets/[name]-[hash][extname]',
-            },
-        },
-    },
 });
+
