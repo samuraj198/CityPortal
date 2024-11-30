@@ -21,6 +21,7 @@ export default defineConfig({
     },
     server: {
         https: true,
-    }
+    },
+    base: 'https://cityportal.onrender.com/build/'
 });
 
