@@ -22,7 +22,7 @@
                 </select>
             </form>
     </div>
-    <div class="cards mt-10 flex flex-col gap-10 items-center">
+    <div class="cards mt-10 flex flex-col gap-10 items-center mb-10">
         @forelse($problems as $problem)
             <div class="card w-[1600px] h-[250px] shadow-2xl rounded-lg flex justify-between">
                 <div class="imgAndInf flex gap-5">

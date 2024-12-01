@@ -93,13 +93,13 @@
                 <x-button onclick="openRegModal()" bg="bg-button" text="Зарегистрироваться" />
             @endif
         </div>
-        <div class="notifs-case hidden absolute top-0 left-0 w-full z-50 flex justify-center p-10">
+        <div class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
             @if(session('success'))
-                <div class="success max-w-96 hidden bg-button text-white px-5 py-3 mx-5 rounded-lg z-50">
+                <div class="success max-w-xs bg-button text-white px-5 py-3 mx-5 rounded-lg pointer-events-auto">
                     <p class="break-words">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
-                <div class="error hidden max-w-96 bg-black text-white px-5 py-3 mx-5 rounded-lg z-50">
+                <div class="error max-w-xs bg-black text-white px-5 py-3 mx-5 rounded-lg pointer-events-auto">
                     @foreach($errors->all() as $error)
                         <p class="break-words">{{ $error }}</p>
                     @endforeach
@@ -224,22 +224,17 @@
         validateReg();
 
         const success = document.querySelector('.success');
-        const notifCase = document.querySelector('.notifs-case');
         if (success) {
             success.classList.remove('hidden');
-            notifCase.classList.remove('hidden');
             setTimeout(() => {
                 success.classList.add('hidden');
-                notifCase.classList.add('hidden');
             }, 5000);
         }
         const error = document.querySelector('.error');
         if (error) {
             error.classList.remove('hidden');
-            notifCase.classList.remove('hidden');
             setTimeout(() => {
                 error.classList.add('hidden');
-                notifCase.classList.add('hidden');
             }, 5000);
         }
     });
