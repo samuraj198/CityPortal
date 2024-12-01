@@ -3,7 +3,7 @@
         @csrf
         <a onclick="closeCreateProblemModal()" class="absolute right-5 top-3 text-4xl cursor-pointer">&times;</a>
         <h2 class="text-2xl font-bold">Создание проблемы</h2>
-        <input required name="name" type="text" placeholder="Введите ваш логин" class="w-full border-[1px] border-black rounded-lg px-3 py-2">
+        <input required name="name" type="text" placeholder="Название проблемы" class="w-full border-[1px] border-black rounded-lg px-3 py-2">
         <textarea name="description" placeholder="Опишите вашу проблему" class="w-full border-[1px] border-black rounded-lg px-3 py-2 min-h-[150px]"></textarea>
         <select class="w-full border-[1px] border-black rounded-lg px-3 py-2" name="category_id">
             <option disabled selected hidden>Выберите категорию проблемы</option>
