@@ -17,6 +17,14 @@ echo "Building frontend assets..."
 npm install --prefix=/var/www/html
 npm run production --prefix=/var/www/html
 
+# Запуск или перезапуск PHP-FPM
+echo "Restarting PHP-FPM service..."
+sudo systemctl restart php-fpm
+
+# Перезапуск Nginx (если требуется)
+echo "Restarting Nginx service..."
+sudo systemctl restart nginx
+
 echo "Running migrations..."
 php artisan migrate --force
 
