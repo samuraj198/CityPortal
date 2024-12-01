@@ -10,6 +10,30 @@
     @include('modals.auth')
     @include('modals.register')
     <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        .success {
+            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
+        }
+        .error {
+            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
+        }
         .input-error {
             border-color: red;
             box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
@@ -67,6 +91,19 @@
             @else
                 <x-button onclick="openAuthModal()" bg="bg-button" text="Войти" />
                 <x-button onclick="openRegModal()" bg="bg-button" text="Зарегистрироваться" />
+            @endif
+        </div>
+        <div class="notifs-case absolute top-0 left-0 w-full z-50 flex justify-center">
+            @if(session('success'))
+                <div class="success fixed max-w-96 hidden bg-main text-white px-5 py-3 rounded-lg top-5 z-50">
+                    <p class="break-words">{{ session('success') }}</p>
+                </div>
+            @elseif($errors->any())
+                <div class="error fixed hidden max-w-96  bg-black text-white px-5 py-3 rounded-lg top-5 z-50">
+                    @foreach($errors->all() as $error)
+                        <p class="break-words">{{ $error }}</p>
+                    @endforeach
+                </div>
             @endif
         </div>
     </header>
@@ -185,6 +222,21 @@
 
         validateLogin();
         validateReg();
+
+        const success = document.querySelector('.success');
+        if (success) {
+            success.classList.remove('hidden');
+            setTimeout(() => {
+                success.classList.add('hidden');
+            }, 5000);
+        }
+        const error = document.querySelector('.error');
+        if (error) {
+            error.classList.remove('hidden');
+            setTimeout(() => {
+                error.classList.add('hidden');
+            }, 5000);
+        }
     });
 
     if (document.getElementById('regError')) {

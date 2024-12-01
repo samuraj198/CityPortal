@@ -14,7 +14,7 @@
             <h2 class="text-2xl font-bold">ВСЕ ЗАЯВКИ</h2>
         @endif
             <form method="GET">
-                <select onchange="this.form.submit()" class="w-full border-[1px] border-black rounded-lg px-3 py-2" name="status">
+                <select onchange="this.form.submit()" class="w-full border-[1px] border-black rounded-lg px-3 py-2 cursor-pointer" name="status">
                     <option value="">Все</option>
                     <option value="Новая" {{ request('status') == 'Новая' ? 'selected' : '' }}>Новые</option>
                     <option value="Решена" {{ request('status') == 'Решена' ? 'selected' : '' }}>Решенные</option>
@@ -47,7 +47,7 @@
                         @include('modals.confModal')
                         <img src="img/icons/new.svg" alt="">
                         @if(auth()->user()->hasRole('User'))
-                            <a onclick="openConfModal({{ $problem->id }}, '{{ $problem->name }}')"><img src="img/icons/trash.svg" alt=""></a>
+                            <a class="cursor-pointer" onclick="openConfModal({{ $problem->id }}, '{{ $problem->name }}')"><img src="img/icons/trash.svg" alt=""></a>
                         @else
                             @include('modals.changeStatus')
                             <x-button onclick="openChangeStatusModal({{ $problem->id }})" text="Изменить статус" />
