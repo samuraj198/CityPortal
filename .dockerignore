@@ -9,5 +9,15 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
-# Оставить папку для публичных файлов
+# Игнорировать всё содержимое storage
+/storage/*
+
+# Исключить public, чтобы она оставалась
 !/storage/app/public
+
+# Исключить папку logs, если нужны логи между деплоями
+!/storage/logs
+
+# Исключить другие необходимые поддиректории storage
+!/storage/framework/sessions
+!/storage/framework/views

@@ -96,12 +96,12 @@
         <div class="notifs-case hidden absolute top-0 left-0 w-full z-50 flex justify-center p-10">
             @if(session('success'))
                 <div class="success max-w-96 hidden bg-button text-white px-5 py-3 mx-5 rounded-lg z-50">
-                    <p class="break-words mx-5">{{ session('success') }}</p>
+                    <p class="break-words">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
-                <div class="error hidden max-w-96  bg-black text-white px-5 py-3 mx-5 rounded-lg z-50">
+                <div class="error hidden max-w-96 bg-black text-white px-5 py-3 mx-5 rounded-lg z-50">
                     @foreach($errors->all() as $error)
-                        <p class="break-words mx-5">{{ $error }}</p>
+                        <p class="break-words">{{ $error }}</p>
                     @endforeach
                 </div>
             @endif
