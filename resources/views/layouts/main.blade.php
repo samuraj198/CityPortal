@@ -93,15 +93,15 @@
                 <x-button onclick="openRegModal()" bg="bg-button" text="Зарегистрироваться" />
             @endif
         </div>
-        <div class="notifs-case absolute top-0 left-0 w-full z-50 flex justify-center">
+        <div class="notifs-case absolute top-0 left-0 w-full z-50 flex justify-center p-10">
             @if(session('success'))
                 <div class="success fixed max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg top-5 z-50">
-                    <p class="break-words">{{ session('success') }}</p>
+                    <p class="break-words px-5 py-3">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
                 <div class="error fixed hidden max-w-96  bg-black text-white px-5 py-3 rounded-lg top-5 z-50">
                     @foreach($errors->all() as $error)
-                        <p class="break-words">{{ $error }}</p>
+                        <p class="break-words px-5 py-3">{{ $error }}</p>
                     @endforeach
                 </div>
             @endif
