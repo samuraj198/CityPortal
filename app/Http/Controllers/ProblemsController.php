@@ -16,7 +16,7 @@ class ProblemsController extends Controller
     {
         $problems = Problem::where('status', 'Решена')->orderBy('updated_at', 'desc')->take(4)->get();
         $count = Problem::where('status', 'Решена')->count();
-        return view('/', compact('problems', 'count'));
+        return view('index', compact('problems', 'count'));
     }
 
     public function profilePage(Request $request)
