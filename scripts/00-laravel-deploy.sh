@@ -10,6 +10,9 @@ php artisan config:cache
 echo "Caching routes..."
 php artisan route:cache
 
+echo "Linking storage..."
+php artisan storage:link
+
 echo "Building frontend assets..."
 npm install --prefix=/var/www/html
 npm run production --prefix=/var/www/html
