@@ -95,7 +95,7 @@
         </div>
         <div class="notifs-case absolute top-0 left-0 w-full z-50 flex justify-center">
             @if(session('success'))
-                <div class="success fixed max-w-96 hidden bg-main text-white px-5 py-3 rounded-lg top-5 z-50">
+                <div class="success fixed max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg top-5 z-50">
                     <p class="break-words">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
