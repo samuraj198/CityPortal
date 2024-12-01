@@ -93,7 +93,7 @@
                 <x-button onclick="openRegModal()" bg="bg-button" text="Зарегистрироваться" />
             @endif
         </div>
-        <div class="notifs-case absolute top-0 left-0 w-full z-50 flex justify-center p-10">
+        <div class="notifs-case hidden absolute top-0 left-0 w-full z-50 flex justify-center p-10">
             @if(session('success'))
                 <div class="success fixed max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg top-5 z-50">
                     <p class="break-words">{{ session('success') }}</p>
@@ -223,20 +223,25 @@
         validateLogin();
         validateReg();
 
-        const success = document.querySelector('.success');
-        if (success) {
-            success.classList.remove('hidden');
-            setTimeout(() => {
-                success.classList.add('hidden');
-            }, 5000);
-        }
-        const error = document.querySelector('.error');
-        if (error) {
-            error.classList.remove('hidden');
-            setTimeout(() => {
-                error.classList.add('hidden');
-            }, 5000);
-        }
+        // const success = document.querySelector('.success');
+        const notifCase = document.querySelector('.notifs-case');
+        // if (success) {
+        //     success.classList.remove('hidden');
+        //     notifCase.classList.remove('hidden');
+        //     setTimeout(() => {
+        //         success.classList.add('hidden');
+        //         notifCase.classList.add('hidden');
+        //     }, 5000);
+        // }
+        // const error = document.querySelector('.error');
+        // if (error) {
+        //     error.classList.remove('hidden');
+        //     notifCase.classList.remove('hidden');
+        //     setTimeout(() => {
+        //         error.classList.add('hidden');
+        //         notifCase.classList.add('hidden');
+        //     }, 5000);
+        // }
     });
 
     if (document.getElementById('regError')) {
