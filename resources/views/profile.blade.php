@@ -38,7 +38,7 @@
                             <p style="display: -webkit-box;
                                     -webkit-line-clamp: 3;
                                     -webkit-box-orient: vertical;
-                                    overflow: hidden;" class="break-words w-[80%]">{{ $problem->description }}</p>
+                                    overflow: hidden;" class="break-words w-[900px]">{{ $problem->description }}</p>
                         </div>
                        <div class="data text-black/50 absolute bottom-0 w-[200px] mb-2">
                            {{ $problem->created_at->setTimezone('Europe/Moscow')->addHour()->format('d.m.Y H:i') }}
