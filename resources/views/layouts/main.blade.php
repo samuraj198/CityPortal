@@ -223,25 +223,25 @@
         validateLogin();
         validateReg();
 
-        // const success = document.querySelector('.success');
+        const success = document.querySelector('.success');
         const notifCase = document.querySelector('.notifs-case');
-        // if (success) {
-        //     success.classList.remove('hidden');
-        //     notifCase.classList.remove('hidden');
-        //     setTimeout(() => {
-        //         success.classList.add('hidden');
-        //         notifCase.classList.add('hidden');
-        //     }, 5000);
-        // }
-        // const error = document.querySelector('.error');
-        // if (error) {
-        //     error.classList.remove('hidden');
-        //     notifCase.classList.remove('hidden');
-        //     setTimeout(() => {
-        //         error.classList.add('hidden');
-        //         notifCase.classList.add('hidden');
-        //     }, 5000);
-        // }
+        if (success) {
+            success.classList.remove('hidden');
+            notifCase.classList.remove('hidden');
+            // setTimeout(() => {
+            //     success.classList.add('hidden');
+            //     notifCase.classList.add('hidden');
+            // }, 5000);
+        }
+        const error = document.querySelector('.error');
+        if (error) {
+            error.classList.remove('hidden');
+            notifCase.classList.remove('hidden');
+            // setTimeout(() => {
+            //     error.classList.add('hidden');
+            //     notifCase.classList.add('hidden');
+            // }, 5000);
+        }
     });
 
     if (document.getElementById('regError')) {
