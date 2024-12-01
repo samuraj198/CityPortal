@@ -9,7 +9,7 @@
         @forelse($problems as $problem)
             <div class="card-{{$problem->id}} w-[450px] h-[630px] shadow-2xl rounded-lg flex items-end">
                 <div class="inf text-white p-2 w-full">
-                    <h2 class="text-2xl font-bold">{{ $problem->name }}</h2>
+                    <h2 class="text-2xl font-bold">{{ \Illuminate\Support\Str::limit($problem->name, 20) }}</h2>
                     <p class="text-white/50">{{ $problem->category->name }}</p>
                     <p class="text-end text-white/50 w-full">{{ $problem->updated_at->setTimezone('Europe/Moscow')->addHour()->format('d.m.Y H:i')}}</p>
                 </div>
