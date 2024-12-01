@@ -54,7 +54,7 @@
 </head>
 <body class="flex flex-col items-center">
     <header class="flex justify-between w-[90%] m-auto mt-10">
-        <a href="{{ secure_url('index') }}"><img src="img/logo/logo.svg" alt="Логотип"></a>
+        <a href="{{ route('index') }}"><img src="img/logo/logo.svg" alt="Логотип"></a>
         <div class="buttons flex gap-5 items-center">
             @if(auth()->user())
                 <a href="{{ secure_url('profile') }}"><x-button bg="bg-button" text="Профиль" /></a>
