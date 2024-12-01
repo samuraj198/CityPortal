@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-F_0ldKRj.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-DfQkg1kh.css') }}">
     <script src="{{ secure_asset('build/assets/app-z-Rg4TxU.js') }}"></script>
     @include('modals.auth')
     @include('modals.register')
@@ -93,7 +93,7 @@
                 <x-button onclick="openRegModal()" bg="bg-button" text="Зарегистрироваться" />
             @endif
         </div>
-        <div class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+        <div class="fixed inset-0 flex items-start mt-5 justify-center z-50 pointer-events-none">
             @if(session('success'))
                 <div class="success max-w-xs bg-button text-white px-5 py-3 mx-5 rounded-lg pointer-events-auto">
                     <p class="break-words">{{ session('success') }}</p>
