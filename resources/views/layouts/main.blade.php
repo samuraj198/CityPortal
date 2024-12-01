@@ -57,8 +57,8 @@
         <a href="{{ secure_url('index') }}"><img src="img/logo/logo.svg" alt="Логотип"></a>
         <div class="buttons flex gap-5 items-center">
             @if(auth()->user())
-                <a href="{{ route('profile') }}"><x-button bg="bg-button" text="Профиль" /></a>
-                <form method="POST" action="{{ route('logout') }}">
+                <a href="{{ secure_url('profile') }}"><x-button bg="bg-button" text="Профиль" /></a>
+                <form method="POST" action="{{ secure_url('logout') }}">
                     @csrf
                     @method('DELETE')
                     <x-button type="submit" text="Выйти" bg="bg-black" />
