@@ -1,6 +1,6 @@
 /node_modules
 /public/hot
-/public/storage
+# /public/storage
 /storage/*.key
 .env
 .phpunit.result.cache
@@ -8,3 +8,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Оставить папку для публичных файлов
+!/storage/app/public

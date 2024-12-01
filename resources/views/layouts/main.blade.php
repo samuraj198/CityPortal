@@ -28,12 +28,12 @@
                 opacity: 0;
             }
         }
-        /*.success {*/
-        /*    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;*/
-        /*}*/
-        /*.error {*/
-        /*    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;*/
-        /*}*/
+        .success {
+            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
+        }
+        .error {
+            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
+        }
         .input-error {
             border-color: red;
             box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
@@ -95,11 +95,11 @@
         </div>
         <div class="notifs-case hidden absolute top-0 left-0 w-full z-50 flex justify-center p-10">
             @if(session('success'))
-                <div class="success fixed max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg top-5 z-50">
+                <div class="success max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg z-50">
                     <p class="break-words mx-5">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
-                <div class="error fixed hidden max-w-96  bg-black text-white px-5 py-3 rounded-lg top-5 z-50">
+                <div class="error hidden max-w-96  bg-black text-white px-5 py-3 rounded-lg z-50">
                     @foreach($errors->all() as $error)
                         <p class="break-words mx-5">{{ $error }}</p>
                     @endforeach
