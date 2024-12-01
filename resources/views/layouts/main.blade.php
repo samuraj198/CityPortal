@@ -28,12 +28,12 @@
                 opacity: 0;
             }
         }
-        .success {
-            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
-        }
-        .error {
-            animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;
-        }
+        /*.success {*/
+        /*    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;*/
+        /*}*/
+        /*.error {*/
+        /*    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 4.5s;*/
+        /*}*/
         .input-error {
             border-color: red;
             box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
