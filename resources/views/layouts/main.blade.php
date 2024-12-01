@@ -96,12 +96,12 @@
         <div class="notifs-case hidden absolute top-0 left-0 w-full z-50 flex justify-center p-10">
             @if(session('success'))
                 <div class="success fixed max-w-96 hidden bg-button text-white px-5 py-3 rounded-lg top-5 z-50">
-                    <p class="break-words">{{ session('success') }}</p>
+                    <p class="break-words mx-5">{{ session('success') }}</p>
                 </div>
             @elseif($errors->any())
                 <div class="error fixed hidden max-w-96  bg-black text-white px-5 py-3 rounded-lg top-5 z-50">
                     @foreach($errors->all() as $error)
-                        <p class="break-words">{{ $error }}</p>
+                        <p class="break-words mx-5">{{ $error }}</p>
                     @endforeach
                 </div>
             @endif
@@ -228,19 +228,19 @@
         if (success) {
             success.classList.remove('hidden');
             notifCase.classList.remove('hidden');
-            // setTimeout(() => {
-            //     success.classList.add('hidden');
-            //     notifCase.classList.add('hidden');
-            // }, 5000);
+            setTimeout(() => {
+                success.classList.add('hidden');
+                notifCase.classList.add('hidden');
+            }, 5000);
         }
         const error = document.querySelector('.error');
         if (error) {
             error.classList.remove('hidden');
             notifCase.classList.remove('hidden');
-            // setTimeout(() => {
-            //     error.classList.add('hidden');
-            //     notifCase.classList.add('hidden');
-            // }, 5000);
+            setTimeout(() => {
+                error.classList.add('hidden');
+                notifCase.classList.add('hidden');
+            }, 5000);
         }
     });
 
