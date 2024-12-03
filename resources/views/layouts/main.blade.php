@@ -46,7 +46,7 @@
         .card-{{$problem->id}} {
             background-position: center;
             background-size: cover;
-            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.8), rgba(0,0,0,1)), url("{{ asset('storage/problems/' . $problem->imgBefore) }}");
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.8), rgba(0,0,0,1)), url("{{ secure_asset('storage/problems/' . $problem->imgBefore) }}");
             background-repeat: no-repeat;
             transition: transform 0.3s ease-in-out;
         }
@@ -58,7 +58,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.8), rgba(0,0,0,1)), url("{{ asset('storage/problems/' . $problem->imgAfter) }}");
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.8), rgba(0,0,0,1)), url("{{ secure_asset('storage/problems/' . $problem->imgAfter) }}");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;

@@ -26,7 +26,7 @@
         @forelse($problems as $problem)
             <div class="card w-[1600px] h-[250px] shadow-2xl rounded-lg flex justify-between">
                 <div class="imgAndInf flex gap-5">
-                    <img class="w-[450px] h-[250px] object-cover rounded-l-lg" src="{{ asset('storage/problems/' . $problem->imgBefore) }}" alt="">
+                    <img class="w-[450px] h-[250px] object-cover rounded-l-lg" src="{{ secure_asset('storage/problems/' . $problem->imgBefore) }}" alt="">
                     <div class="infAndData relative py-2">
                         <div class="inf">
                             <h2 class="text-2xl font-bold">{{ \Illuminate\Support\Str::limit($problem->name, 40) }}
